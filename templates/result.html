@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>뉴스 워드클라우드</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.1.0/wordcloud2.min.js"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-    <h1>뉴스 워드클라우드</h1>
+{% extends "layout.html" %}
+{% block content %}
     <canvas id="barChart"></canvas>
     <script>
         // HTML 문서에서 'barChart' 요소 가져오기
@@ -70,5 +60,4 @@
             drawOutOfBound: false        // 캔버스 영역 밖 단어 그리지 않음
         });
     </script>
-</body>
-</html>
+{% endblock %}

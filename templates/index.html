@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>뉴스 워드클라우드</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-    <h1>뉴스 주요 키워드 확인하기</h1>
+{% extends "layout.html" %}
+{% block content %}
     <form method="post" action="{{ url_for('generate') }}">
         <input type="text" name="news_link" placeholder="뉴스 링크 입력" required><br>
         <button type="submit">링크로 워드클라우드 생성</button>
@@ -16,5 +8,4 @@
         <input type="file" name="news_text" accept=".txt" required><br>
         <button type="submit">txt 파일로 워드클라우드 생성</button>
     </form>
-</body>
-</html>
+{% endblock %}
