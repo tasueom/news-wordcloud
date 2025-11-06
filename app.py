@@ -43,8 +43,8 @@ def get_data(news_content):
     labels = list(top_words.keys())
     values = list(top_words.values())
 
-    # 워드클라우드용 전체 단어 리스트 (빈도 포함)
-    wc_data = [{"text": w, "weight": c} for w, c in word_count.items()]
+    # 워드클라우드용 상위 10개 단어 리스트 (빈도 포함)
+    wc_data = [{"text": w, "weight": c} for w, c in top_words.items()]
 
     return labels, values, wc_data
 
