@@ -1,0 +1,10 @@
+body {
+    font-family: '맑은 고딕', sans-serif;
+    text-align: center;
+    margin: 40px;
+}
+
+canvas {
+    margin: 30px auto;
+    display: block;
+}
