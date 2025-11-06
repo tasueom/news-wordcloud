@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>뉴스 링크 입력하고 주요 키워드 확인하기</h1>
-    <form method="post">
+    <form method="post" action="{{ url_for('generate') }}">
         <input type="text" name="news_link" placeholder="뉴스 링크 입력"><br>
         <button type="submit">워드클라우드 생성</button>
     </form>
