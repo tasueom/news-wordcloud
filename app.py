@@ -61,5 +61,12 @@ def generate():
     
     return render_template('result.html', labels=labels, values=values, wc_data=wc_data)
 
+@app.route('/generate_text', methods=['POST'])
+def generate_text():
+    news_text = request.files['news_text']
+    news_content = news_text.read().decode('utf-8')
+    labels, values, wc_data = get_data(news_content)
+    return render_template('result.html', labels=labels, values=values, wc_data=wc_data)
+
 if __name__ == '__main__':
     app.run(debug=True)
