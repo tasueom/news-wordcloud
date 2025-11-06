@@ -1,10 +1,178 @@
-body {
-    font-family: '맑은 고딕', sans-serif;
-    text-align: center;
-    margin: 40px;
+/* 전역 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: '맑은 고딕', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* 컨테이너 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* 헤더 스타일 */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 a:hover {
+    color: #666;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 40px 0 20px 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* 폼 스타일 */
+form {
+    background: #fafafa;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid #e0e0e0;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: border-color 0.2s ease;
+    background: white;
+    font-family: inherit;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #999;
+}
+
+input[type="file"] {
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+input[type="file"]:hover {
+    border-color: #999;
+}
+
+/* 버튼 스타일 */
+button {
+    width: 100%;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: inherit;
+}
+
+button:hover {
+    background: #555;
+}
+
+button:active {
+    background: #222;
+}
+
+/* 캔버스 스타일 */
 canvas {
-    margin: 30px auto;
     display: block;
+    margin: 30px auto;
+    border-radius: 4px;
+    background: white;
+}
+
+#barChart {
+    max-width: 100%;
+    height: auto !important;
+}
+
+#wordCanvas {
+    border: 1px solid #e0e0e0;
+    background: white;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+        border-radius: 4px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    canvas {
+        margin: 20px auto;
+        max-width: 100%;
+    }
+
+    #wordCanvas {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* 스크롤바 스타일 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
 }
